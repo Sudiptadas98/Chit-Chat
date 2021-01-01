@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-image: url('../images/background2.jpg'); */
+}
+
+.logo{
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: auto;
+}
+nav{
+    max-width: 80%;
+    margin: auto;
+    background-color: rgb(91, 149, 214);
+}
+
+.container{
+    background: url('../images/background2.jpg');
+    max-width: 80%;
+    margin: auto;
+    height: 86vh;
+    overflow-y: auto;
+}
+
+.message{
+    font-size: 25px;
+    background-color: rgb(160, 158, 158);
+    max-width: 58%;
+    width: auto;
+    padding: 10px;
+    margin: 17px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.right{
+    float: right;
+    clear: both;
+}
+.left{
+    float: left;
+    clear: both;
+}
+.send{
+    /* margin: 5px 0px; */
+}
+#send-container{
+    background: url('../images/background2.jpg');
+    display: flex;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    width: 100%;
+}
+#messageInp{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 20px;
+    margin: 0px 10px;
+    /* background-color: white; */
+}
+.int{
+    width: 80%;
+}
+.snd{
+    width: 20%;
+    margin-left: 8px;
+}
+.btn{
+    /* width: 10%; */
+    width: 90%;
+    border: 2px solid black;
+    /* height: 35px; */
+    padding: 10px;
+    cursor: pointer;
+    margin: 0px 10px;
+}
+
+@media only screen and (max-width: 500px){
+    .container{
+        max-width: 100%;
+    }
+    nav{
+        max-width: 100%;
+    }
+    #send-container{
+        max-width: 100%;
+    }
+    #messageInp{
+        margin: 0px 6px;
+    }
+    .btn{
+        max-width: 73%;
+    }
+    body{
+        background: url('../images/background2.jpg');
+    }
+}
