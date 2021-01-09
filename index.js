@@ -1,5 +1,5 @@
 // node server which will handle socket io connections.
-PORT = process.env.PORT || 5500;
+PORT = process.env.PORT || 8000;
 
 
 
