@@ -21,7 +21,11 @@ const append = (message, position)=>{
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
     const message = messageInput.value;
+    if(!message){
+        return false;
+    }
     append(`You: ${message}`, 'right');
+    messageContainer.scrollTop = messageContainer.scrollHeight;
     socket.emit('send', message);
     messageInput.value = ''
 })
@@ -30,13 +34,18 @@ const name = prompt("enter your name to join");
 socket.emit('new-user-joined', name);
 
 socket.on('user-joined', name =>{
-    append(`${name} joined the chat`, 'left')
+    append(`${name} joined the chat`, 'left');
+    messageContainer.scrollTop = messageContainer.scrollHeight;
 })
 
 socket.on('receive', data =>{
-    append(`${data.name}: ${data.message}`, 'left')
+    
+    append(`${data.name}: ${data.message}`, 'left');
+    messageContainer.scrollTop = messageContainer.scrollHeight;
 })
 
 socket.on('left', name =>{
-    append(`${name} left the chat`, 'left')
+    append(`${name} left the chat`, 'left');
+    messageContainer.scrollTop = messageContainer.scrollHeight;
 })
+
